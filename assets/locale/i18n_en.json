@@ -1,0 +1,16 @@
+{
+  "Email address": "Email address",
+  "Password": "Password",
+  "password forgot": "password forgot?",
+  "Login": "Login",
+  "Logout": "Logout",
+  "This field is required": "This field is required",
+  "Please enter the email address for the account you forgot your password to": "Please enter the email address for the account you forgot your password to",
+  "Request new password": "Request new password",
+  "We could not find this email address linked to any account": "We could not find this email address linked to any account",
+  "Reset password email send. Please check your email inbox.": "Reset password email send. Please check your email inbox.",
+  "Invalid email and password combination": "Invalid email and password combination",
+  "Your are not connected to internet": "Your are not connected to internet",
+  "Sorry, an error has occurred": "Sorry, an error has occurred",
+  "Login...": "Login..."
+}

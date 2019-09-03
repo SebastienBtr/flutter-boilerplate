@@ -1,0 +1,16 @@
+{
+  "Email address": "Adresse E-mail",
+  "Password": "Mot de passe",
+  "password forgot": "mot de passe oublié ?",
+  "Login": "Connexion",
+  "Logout": "Deconnexion",
+  "This field is required": "Veuillez renseigner ce champ",
+  "Please enter the email address for the account you forgot your password to": "Entrez l'email pour le compte dont vous avez oublié le mot de passe",
+  "Request new password": "Valider",
+  "We could not find this email address linked to any account": "Nous n'avons trouvé aucun compte pour cet email",
+  "Reset password email send. Please check your email inbox.": "Email de réinitialisation du mot de passe envoyé. Vérifiez votre messagerie.",
+  "Invalid email and password combination": "Email ou mot de passe incorrect",
+  "Your are not connected to internet": "Vous n'êtes pas connecté à Internet",
+  "Sorry, an error has occurred": "Désolé, une erreur est survenue",
+  "Login...": "Connexion..."
+}
