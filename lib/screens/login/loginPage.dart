@@ -33,58 +33,63 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Center(
-            child: authBloc.isLoading
-                ?
-                // Loading indicator
-                Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      const CircularProgressIndicator(),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 15),
-                        child: Text(
-                          Translations.of(context).text('Login...'),
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
-                    ],
-                  )
-                :
-                // Login form
-                ConstrainedBox(
-                    constraints: const BoxConstraints(
-                      maxWidth: 600,
-                    ),
-                    child: Column(
+            child: SingleChildScrollView(
+              child: authBloc.isLoading
+                  ?
+                  // Loading indicator
+                  Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        const CircularProgressIndicator(),
                         Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Image.asset('assets/logo.png', height: 120,),
-                        ),
-                        Card(
-                          margin:
-                              const EdgeInsets.only(left: 10.0, right: 10.0),
-                          child: Column(
-                            children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.all(15),
-                                child: Text(
-                                  '${authBloc.loginError}',
-                                  style: TextStyle(color: Colors.red),
-                                ),
-                              ),
-                              LoginForm(
-                                onSubmit: (String login, String password) =>
-                                    authBloc.login(
-                                        context, this, login, password),
-                              )
-                            ],
+                          padding: const EdgeInsets.only(top: 15),
+                          child: Text(
+                            Translations.of(context).text('Login...'),
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
                       ],
+                    )
+                  :
+                  // Login form
+                  ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        maxWidth: 600,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Image.asset(
+                              'assets/logo.png',
+                              height: 120,
+                            ),
+                          ),
+                          Card(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: Column(
+                              children: <Widget>[
+                                Padding(
+                                  padding: const EdgeInsets.all(15),
+                                  child: Text(
+                                    '${authBloc.loginError}',
+                                    style: TextStyle(color: Colors.red),
+                                  ),
+                                ),
+                                LoginForm(
+                                  onSubmit: (String login, String password) =>
+                                      authBloc.login(
+                                          context, this, login, password),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
+            ),
           ),
         ],
       ),

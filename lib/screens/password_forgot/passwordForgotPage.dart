@@ -37,41 +37,47 @@ class _PasswordForgotPageState extends State<PasswordForgotPage> {
             ),
           ),
           Center(
-            child: passwordForgotBloc.isLoading
-                ? const CircularProgressIndicator()
-                : ConstrainedBox(
-                    constraints: const BoxConstraints(
-                      maxWidth: 600,
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Image.asset('assets/logo.png', height: 120,),
-                        ),
-                        Card(
-                            margin:
-                                const EdgeInsets.only(left: 10.0, right: 10.0),
-                            child: Column(
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.all(15.0),
-                                  child: Text(
-                                    '${passwordForgotBloc.errorMessage}',
-                                    style: TextStyle(color: Colors.red),
+            child: SingleChildScrollView(
+              child: passwordForgotBloc.isLoading
+                  ? const CircularProgressIndicator()
+                  : ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        maxWidth: 600,
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Image.asset(
+                              'assets/logo.png',
+                              height: 120,
+                            ),
+                          ),
+                          Card(
+                              margin: const EdgeInsets.only(
+                                  left: 10.0, right: 10.0),
+                              child: Column(
+                                children: <Widget>[
+                                  Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: Text(
+                                      '${passwordForgotBloc.errorMessage}',
+                                      style: TextStyle(color: Colors.red),
+                                    ),
                                   ),
-                                ),
-                                PasswordForgotForm(
-                                  onSubmit: (String email) => passwordForgotBloc
-                                      .requestPassword(context, this, email),
-                                ),
-                              ],
-                            )),
-                      ],
+                                  PasswordForgotForm(
+                                    onSubmit: (String email) =>
+                                        passwordForgotBloc.requestPassword(
+                                            context, this, email),
+                                  ),
+                                ],
+                              )),
+                        ],
+                      ),
                     ),
-                  ),
-          )
+            ),
+          ),
         ],
       ),
     );
