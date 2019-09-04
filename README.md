@@ -64,7 +64,7 @@ For small data that we need to save (settings, token...) the project uses the pa
 * Add the language code in the `supportedLanguages` list in lib/bloc/mainBloc.dart
 * In ios/Runner/Info.plist add the language code in the array of the `CFBundleLocalizations` key
 
-## Update the icon app
+## Update the app icon
 
 change the files in assets directory and run:
 
