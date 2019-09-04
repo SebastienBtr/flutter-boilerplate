@@ -7,6 +7,16 @@
 * Create a .env file by copying the .env.default file and complete the different fields
 * Use ```flutter run``` to launch the project on an emulator
 
+## Adapt the boilerplate for your project
+
+* Replace all the occurence of `flutter_boilerplate` by the name of your package
+* Replace all the occurence of `example.boilerplate.app` by your app id
+* In ios/Runner/Info.plist replace `Boilerplate` by the name of your app
+* In andoir/app/src/main/AndroidManifest.xml replace `Boilerplate` by the name of your app
+* In lib/utils/urls.dart edit the enpoints routes
+* In lib/bloc/authBloc.dart and lib/bloc/passwordForgotBloc.dart look for the TODOS to uncomment the API calls
+* In assets replace the images
+
 ## Project structure
 
 ```
@@ -47,6 +57,12 @@ For small data that we need to save (settings, token...) the project uses the pa
 * 'login': the user login
 * 'password': the user password
 * 'language': the language code setting
+
+## Add/Edit available languages
+
+* Add a new translation file in assets/local
+* Add the language code in the `supportedLanguages` list in lib/bloc/mainBloc.dart
+* In ios/Runner/Info.plist add the language code in the array of the `CFBundleLocalizations` key
 
 ## Update the icon app
 
