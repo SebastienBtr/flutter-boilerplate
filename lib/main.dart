@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Molteo',
+      title: 'Boilerplate',
       theme: ThemeData(
         primarySwatch: createMaterialColor(const Color(0xFF8e30db)),
         accentColor: createMaterialColor(const Color(0xFFd111db)),
